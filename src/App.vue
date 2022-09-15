@@ -1,30 +1,55 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
   <router-view/>
 </template>
 
+<script setup>
+
+</script>
+
+
 <style>
+
+:root {
+  --cor-laranja-normal: #f07924;
+  --cor-laranja-hover: #dd8e56;
+
+  --cor-verde-normal: #6fd826;
+  --cor-verde-hover: #7cff1e;
+
+  --cor-verde-pill-pedido: green;
+  --cor-laranja-pill-pedido: orangered;
+}
+
+body {
+  background: #fafafa;
+  box-sizing: border-box;
+  margin: 0;
+}
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: Tahoma, Geneva, Verdana, sans-serif;
+  /* font-family: Verdana, Tahoma, Geneva, sans-serif; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+  /* color: #707070; */
+  color: #505050;
+  background: #fafafa;
+  max-width: 1000px;
+  margin: 0 auto;
+  box-shadow: 0 0 0 2000px #202020;
 }
 
-nav {
-  padding: 30px;
+::-webkit-scrollbar {
+  display: none;
 }
 
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
+a {
+  text-decoration: none;
+  color: unset;
 }
 
-nav a.router-link-exact-active {
-  color: #42b983;
+::selection {
+  color: white;
+  background: var(--cor-laranja-normal);
 }
 </style>
